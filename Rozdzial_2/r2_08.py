@@ -1,8 +1,9 @@
-# program r2_07.py
+# program r2_08.py
 # wyświetlamy tło + obiekty + ruch piłki
 # paletki „opakowujemy” w definicję klasy aby zmniejszyć ilość kodu
 # dodajemy ubsługę ruchu paletek + odbijanie piłeczki
 # aktualizujemy kod dla różnych wielkości paletki/piłeczki
+# dodajemy wygraną i koniec gry
 
 # wczytujemy moduł pgzrun
 import pgzrun
@@ -105,6 +106,14 @@ def check_bounce():
         ball.direction_y = "up"
 
 
+def check_winner():
+    if ball.winner:
+        winner_txt = f"And the winner is: {ball.winner}"
+        screen.draw.text(
+            winner_txt, (WIDTH // 3, HEIGHT // 2), color="red", fontsize=60
+        )
+
+
 # start programu
 WIDTH = 1280
 HEIGHT = 853
@@ -134,7 +143,8 @@ def draw():
     palette_a.drawing()
     palette_b.drawing()
     ball.draw()
+    check_winner()
 
 
-# uruchomienie modułu pygame zero
+# uruchomienie modułu Pygame Zero
 pgzrun.go()

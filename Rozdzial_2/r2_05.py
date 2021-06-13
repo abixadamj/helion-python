@@ -65,5 +65,5 @@ def draw():
     ball.draw()
 
 
-# uruchomienie modułu pygame zero
+# uruchomienie modułu Pygame Zero
 pgzrun.go()

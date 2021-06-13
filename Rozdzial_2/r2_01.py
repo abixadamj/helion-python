@@ -1,5 +1,5 @@
-# program r2_02.py
-# wyświetlamy tło
+# program r2_01.py
+# zaczynamy nasz program
 
 # wczytujemy moduł pgzrun
 import pgzrun
@@ -17,8 +17,8 @@ def update():
 
 
 def draw():
-    screen.blit("nature-2384_1280.jpg", (0, 0))
+    pass
 
 
-# uruchomienie modułu pygame zero
+# uruchomienie modułu Pygame Zero
 pgzrun.go()

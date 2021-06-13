@@ -1,5 +1,5 @@
-# program r1_30g.py
-# przestrzeń nazw - funkcja i zmienna unmutable + global
+# program r1_30.py
+# przestrzeń nazw - funkcja i zmienna niemutowalna
 
 zmienna_a = 10
 
@@ -9,8 +9,7 @@ def funkcja_A():
 
 
 def funkcja_B():
-    global zmienna_a
-    zmienna_a = 20  # przypisanie do zmiennej wewnątrz przestrzeni nazw + global!
+    zmienna_a = 20  # przypisanie do zmiennej wewnątrz przestrzeni nazw!
     print(f"Wewnątrz B: {zmienna_a} - ID = {id(zmienna_a)}")
 
 

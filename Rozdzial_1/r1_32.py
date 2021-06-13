@@ -1,10 +1,9 @@
 # program r1_32.py
-# przestrzeń nazw - obiekty
+# przestrzeń nazw - klasy i obiekty
 
 
 class Klasa:
     wlasciwosc_0 = "X0"
-    pass
 
 
 obiekt_a = Klasa()

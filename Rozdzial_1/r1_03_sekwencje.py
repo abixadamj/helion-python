@@ -4,9 +4,9 @@ lista = [3, 4, 5, 5, 6, 2, 4, 1]
 print(lista)
 print(type(lista))
 
-tupla = (3, 4, 5, 5, 6, 2, 4, 1)
-print(tupla)
-print(type(tupla))
+krotka = (3, 4, 5, 5, 6, 2, 4, 1)
+print(krotka)
+print(type(krotka))
 
 napis = "Python jest super"
 print(napis)
@@ -19,10 +19,10 @@ print(len(lista))
 print(lista[0])
 print(lista[7])
 
-print("Badanie elementów: tupla")
-print(len(tupla))
-print(tupla[2])
-print(tupla[4])
+print("Badanie elementów: krotka")
+print(len(krotka))
+print(krotka[2])
+print(krotka[4])
 
 print("Badanie elementów: napis")
 print(len(napis))

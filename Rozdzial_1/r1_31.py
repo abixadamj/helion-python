@@ -1,7 +1,7 @@
-# program r1_30.py
-# przestrzeń nazw - funkcja i zmienna unmutable
+# program r1_31.py
+# przestrzeń nazw - funkcja i zmienna mutowalna
 
-zmienna_a = 10
+zmienna_a = [10]
 
 
 def funkcja_A():
@@ -9,7 +9,7 @@ def funkcja_A():
 
 
 def funkcja_B():
-    zmienna_a = 20  # przypisanie do zmiennej wewnątrz przestrzeni nazw!
+    zmienna_a[0] = 20  # przypisanie do zmiennej poza przestrzenią nazw!
     print(f"Wewnątrz B: {zmienna_a} - ID = {id(zmienna_a)}")
 
 

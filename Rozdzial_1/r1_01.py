@@ -1,8 +1,8 @@
 # program r1_01.py
-import os
+import sys
 
-dane = os.uname()
+dane = sys.implementation
 print("To jest nasz pierwszy program... w języku Python")
-print("IDLE z Python 3.8.5 w systemie Linux:")
+print("IDLE z Python w systemie Linux:")
 print("===================")
 print(dane)

@@ -1,9 +1,7 @@
-# program r2_08.py
+# program r2_06.py
 # wyświetlamy tło + obiekty + ruch piłki
 # paletki „opakowujemy” w definicję klasy aby zmniejszyć ilość kodu
 # dodajemy ubsługę ruchu paletek + odbijanie piłeczki
-# aktualizujemy kod dla różnych wielkości paletki/piłeczki
-# dodajemy wygraną i koniec gry
 
 # wczytujemy moduł pgzrun
 import pgzrun
@@ -11,14 +9,12 @@ from random import randint, choice
 
 # definiujemy klasę dla paletek
 class Palette:
-    def __init__(self, palette, position, width=140, ball_width=10):
+    def __init__(self, palette, position):
         """Palette i jej właściwości"""
         self.palette = palette
         self.palette.x = position[0]
         self.palette.y = position[1]
         self.palette.speed = 5
-        self.palette.pcenter = width // 2
-        self.palette.ball_width = ball_width
 
     def drawing(self):
         """Wywołujemy metodę obiektu"""
@@ -28,25 +24,22 @@ class Palette:
         """Aktualizujemy pozycję w osi X"""
         if direction == "left":
             self.palette.x -= self.palette.speed
-            if self.palette.x < self.palette.pcenter:
-                self.palette.x = self.palette.pcenter + 5
+            if self.palette.x < 70:
+                self.palette.x = 75
         elif direction == "right":
             self.palette.x += self.palette.speed
-            if self.palette.x > (WIDTH - self.palette.pcenter):
-                self.palette.x = WIDTH - self.palette.pcenter + 5
+            if self.palette.x > (WIDTH - 70):
+                self.palette.x = WIDTH - 75
 
     def bounce(self):
         """Sprawdzamy czy piłeczka odbija się od paletki"""
         # jeśli środek paletki zbyt daleko od środka piłeczki to nie odbijamy
-        if (
-            self.palette.distance_to(ball)
-            > self.palette.pcenter + self.palette.ball_width
-        ):
+        if self.palette.distance_to(ball) > 80:
             return False
 
         # jeśli środek paletki dalej niż 20 pixeli od środka piłeczki
         # w osi y to nie odbijamy
-        if abs(self.palette.y - ball.y) > self.palette.ball_width * 2:
+        if abs(self.palette.y - ball.y) > 20:
             return False
 
         # dodatkowo zmieniamy kierunki lewo/prawo dla piłeczki
@@ -106,14 +99,6 @@ def check_bounce():
         ball.direction_y = "up"
 
 
-def check_winner():
-    if ball.winner:
-        winner_txt = f"And the winner is: {ball.winner}"
-        screen.draw.text(
-            winner_txt, (WIDTH // 3, HEIGHT // 2), color="red", fontsize=60
-        )
-
-
 # start programu
 WIDTH = 1280
 HEIGHT = 853
@@ -143,8 +128,7 @@ def draw():
     palette_a.drawing()
     palette_b.drawing()
     ball.draw()
-    check_winner()
 
 
-# uruchomienie modułu pygame zero
+# uruchomienie modułu Pygame Zero
 pgzrun.go()

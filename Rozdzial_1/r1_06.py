@@ -11,14 +11,14 @@ list_object[2] = "Inna wartość"
 print(f"Dla ID = {id(list_object)} wartość: {list_object}")
 
 # test modyfikacji obiektu typu dict
-dict_object = {1: "One element"}
+dict_object = {1: "Pierwszy element"}
 print(f"Dla ID = {id(dict_object)} wartość: {dict_object}")
 
 # Do obiektu możemy dodać wartość
-dict_object[2] = "Second element"
-dict_object[3] = "Third element"
+dict_object[2] = "Drugi element"
+dict_object[3] = "Trzeci element"
 print(f"Dla ID = {id(dict_object)} wartość: {dict_object}")
 
 # lub zmienić wartość w środku
-dict_object[2] = "Other value"
+dict_object[2] = "Inna wartość"
 print(f"Dla ID = {id(dict_object)} wartość: {dict_object}")
