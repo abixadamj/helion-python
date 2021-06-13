@@ -60,7 +60,7 @@ max_range = V_START * total_time
 
 # obliczamy kolejne wartości Y dla X co 1/100 ogólnego zasięgu
 x_points = np.arange(0, max_range, max_range / 100)
-y_points = H_START - ((g / 2) * (x_points / V_START ) ** 2)
+y_points = H_START - ((g / 2) * (x_points / V_START) ** 2)
 
 # dodajemy wykres i umieszczamy punkt startu i spadku
 title = f"""Wykres rzutu poziomego z V_START = {V_START} m/s (g = {g} m/sek^2)

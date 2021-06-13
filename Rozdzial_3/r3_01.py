@@ -61,10 +61,9 @@ max_range = V_START * total_time
 # dodajemy wykres i umieszczamy punkt startu i spadku
 title = f"""Wykres rzutu poziomego z V_START = {V_START} m/s (g = {g} m/sek^2)
         Czas lotu = {round(total_time,4)} sek."""
-legend = [f"H_START={H_START} m", f"max_range={round(max_range,3)} m"]
-plt.scatter(0, H_START)
-plt.scatter(max_range, 0)
+plt.scatter(0, H_START, label=f"H_START={H_START} m")
+plt.scatter(max_range, 0, label=f"max_range={round(max_range,3)} m")
 plt.grid()
 plt.title(title)
-plt.legend(legend)
+plt.legend()
 plt.show()
