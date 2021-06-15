@@ -48,7 +48,7 @@ if not load_module_ok:
 # teraz mamy wszystkie moduły zainstalowane
 print("Super! Możemy działać....")
 
-nasaids = [1, 2, 3, 4, 5]  # numery ID w bazie NASA
+nasaids = [1, 2, 3, 4]  # numery ID w bazie NASA
 names = ["Merkury", "Wenus", "Ziemia", "Mars"]
 colors = ["gray", "orange", "green", "chocolate"]
 sizes = [0.38, 0.95, 1.0, 0.53]

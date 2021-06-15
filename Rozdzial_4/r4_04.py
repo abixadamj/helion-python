@@ -1,5 +1,5 @@
-# program r4_03.py
-# sprawdzamy, czy posiadamy zainstalowane odpowiednie biblilteki zewnętrzne
+# program r4_04.py
+# sprawdzamy, czy posiadamy zainstalowane odpowiednie biblioteki zewnętrzne
 # importujemy funkcje dodatkowe
 # wprowadzamy kod z projektu https://github.com/chongchonghe/Python-solar-system
 

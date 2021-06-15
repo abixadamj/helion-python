@@ -10,6 +10,7 @@ def error_module_info(name):
     print(f"Instalacja poleceniem: pip install {name}")
     print("-----------------------")
 
+
 def get_horizon_data(nasaids, names, colors, sizes, start_date="2018-01-01"):
     """nasaids = [1, 2, 3, 4]
     funkcja bazuje na projekcie https://github.com/chongchonghe/Python-solar-system"""
@@ -18,10 +19,9 @@ def get_horizon_data(nasaids, names, colors, sizes, start_date="2018-01-01"):
     from astroquery.jplhorizons import Horizons
     from numpy import double
 
-
     data = {
-        "info" : "Baza danych o pozycjach i prędkości planet w określonym dniu",
-        "date" : start_date,
+        "info": "Baza danych o pozycjach i prędkości planet w określonym dniu",
+        "date": start_date,
     }
 
     for i, nasaid in enumerate(nasaids):
@@ -43,7 +43,5 @@ def get_horizon_data(nasaids, names, colors, sizes, start_date="2018-01-01"):
     return data
 
 
-
-
 if __name__ == "__main__":
-    print("To jest moduł dodatkowy dla Rozdziału 3")
+    print("To jest moduł dodatkowy dla Rozdziału 4")
