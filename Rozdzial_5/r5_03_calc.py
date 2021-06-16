@@ -3,6 +3,8 @@
 
 import pandas as pd
 
+# zapasowa kopia do pobrania - stan na 16.06.2021 rok
+# https://github.com/abixadamj/helion-python/raw/main/Rozdzial_5/dane_opady_temperatura.ods
 source_data = "dane_opady_temperatura.ods"
 print(f"Dane źródłowe: {source_data}")
 

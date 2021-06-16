@@ -5,6 +5,7 @@ from sys import exit
 
 try:
     import pandas as pd
+
     print("Moduł pandas wczytany.")
 except:
     print("Zainstaluj: 'pip install pandas' ")

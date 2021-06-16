@@ -8,7 +8,7 @@ Kody źródłowe do książki pt. „Python 3 - Projekty dla początkujących i 
 * Rozdział 2: Gry wykorzystujące mechanikę ruchu – Pong
 * Rozdział 3: Gra w połączeniu z fizyką
 * Rozdział 4: Symulacje fizyczne - animacja układu słonecznego
-* Rozdział 5:
+* Rozdział 5: Prezentacja i wizualizacja danych
 * Rozdział 6:
 * Rozdział 7:
 * Rozdział 8:
@@ -24,3 +24,9 @@ Kody źródłowe do książki pt. „Python 3 - Projekty dla początkujących i 
 * Pygame Zero: https://pypi.org/project/pgzero/
 * Matplotlib: https://pypi.org/project/matplotlib/
 * NumPy: https://pypi.org/project/numpy/
+* Pandas: https://pypi.org/project/pandas/
+* odfpy: https://pypi.org/project/odfpy/
+* openpyxl: https://pypi.org/project/openpyxl/
+
+### Wykorzystywane otwarte dane
+* Otwarta Gdynia: http://otwartedane.gdynia.pl/portal/data/city/6/3/data.csv

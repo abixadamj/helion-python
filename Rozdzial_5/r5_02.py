@@ -14,8 +14,8 @@ except:
 # jest ok, działamy dalej
 source_data = "http://otwartedane.gdynia.pl/portal/data/city/6/3/data.csv"
 
-# zapasowa kopia - stan na 4.03.2021 rok
-# source_data = "https://raw.githubusercontent.com/abixadamj/project-simple/main/data.csv"
+# zapasowa kopia - stan na 16.06.2021 rok
+# source_data = "https://raw.githubusercontent.com/abixadamj/helion-python/main/Rozdzial_5/data.csv"
 print(f"Dane źródłowe: {source_data}")
 
 # tworzymy tzw. "DataFrame"
