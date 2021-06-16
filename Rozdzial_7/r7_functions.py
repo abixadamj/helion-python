@@ -1,4 +1,4 @@
-# program r7_function.py
+# program r7_functions.py
 # funkcje dodatkowe
 
 import sys
@@ -26,7 +26,7 @@ def open_image(file: str) -> Image:
     return image
 
 
-def info_exiff(file_name: str):
+def info_exif(file_name: str):
     """Pobieramy dane Exiff i wyświetlamy je"""
     if not test_file(file_name):
         print(f"Brak pliku: {file_name}")
@@ -47,7 +47,7 @@ def info_exiff(file_name: str):
         print(f"Atrybut: {attrib} = {value}")
 
 
-def anonymize_exiff(file_name: str) -> str:
+def anonymize_exif(file_name: str) -> str:
     """Zastępujemy oryginalne dane Exiff naszymi wymyślonymi"""
 
     image_data = open_image(file_name)
@@ -64,7 +64,6 @@ def anonymize_exiff(file_name: str) -> str:
         elif "make" in attrib or "model" in attrib or "software" in attrib:
             image_data[attrib] = "Python"
 
-
     new_file = os.path.splitext(file_name)[0] + "_anon" + os.path.splitext(file_name)[1]
 
     with open(new_file, "wb") as anon_file:
@@ -77,7 +76,7 @@ if __name__ == "__main__":
     args = sys.argv
     if len(args) == 2:
         print(f"Uruchamiamy dla jednego pliku: {args[1]} - informacje:")
-        info_exiff((args[1]))
+        info_exif((args[1]))
         sys.exit(0)
     else:
         print(f"Wywołanie samego skryptu {args[0]} niemożliwe.")

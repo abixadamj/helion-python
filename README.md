@@ -10,7 +10,7 @@ Kody źródłowe do książki pt. „Python 3 - Projekty dla początkujących i 
 * Rozdział 4: Symulacje fizyczne - animacja układu słonecznego
 * Rozdział 5: Prezentacja i wizualizacja danych
 * Rozdział 6: Wizualizacja danych na mapie
-* Rozdział 7:
+* Rozdział 7: Anonimizowanie danych Exif w zdjęciach
 * Rozdział 8:
 * Rozdział 9: Zakończenie
 
@@ -29,6 +29,7 @@ Kody źródłowe do książki pt. „Python 3 - Projekty dla początkujących i 
 * openpyxl: https://pypi.org/project/openpyxl/
 * Cartopy: https://pypi.org/project/Cartopy/
 * SciPy: https://pypi.org/project/scipy/
+* Exif - https://pypi.org/project/exif/
 
 ### Wykorzystywane otwarte dane
 * Otwarta Gdynia: http://otwartedane.gdynia.pl/portal/data/city/6/3/data.csv
