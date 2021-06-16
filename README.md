@@ -11,7 +11,7 @@ Kody źródłowe do książki pt. „Python 3 - Projekty dla początkujących i 
 * Rozdział 5: Prezentacja i wizualizacja danych
 * Rozdział 6: Wizualizacja danych na mapie
 * Rozdział 7: Anonimizowanie danych Exif w zdjęciach
-* Rozdział 8:
+* Rozdział 8: System operacyjny ma znaczenie
 * Rozdział 9: Zakończenie
 
 
