@@ -7,7 +7,7 @@ X = []  # szerokość geograficzna
 Y = []  # długość geograficzna
 
 # wczytujemy dane z pliku
-with open("examples/miasta.csv", "r") as dane:
+with open("miasta.csv", "r", encoding='utf-8') as dane:
     cities_all = dane.readlines()
 
 print(cities_all)

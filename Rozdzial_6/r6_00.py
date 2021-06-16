@@ -6,6 +6,7 @@ from sys import exit
 try:
     import cartopy.crs as crs
     import cartopy.feature as cfeature
+
     print("Moduł cartopy wczytany.")
 except:
     print("Zainstaluj: 'pip install cartopy' ")
@@ -13,6 +14,7 @@ except:
 
 try:
     import matplotlib.pyplot as plt
+
     print("Moduł matplotlib wczytany.")
 except:
     print("Zainstaluj: 'pip install matplotlib' ")
