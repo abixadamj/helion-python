@@ -71,7 +71,8 @@ def zapis_wykresu(
     plt.close("all")
 
 
-# ustawienie ziarna
+# Ustawienie stałego ziarna dla generatora liczb pseudolosowych tak, aby liczby zwracane przez 
+# generator były takie same przy kolejnych uruchomieniach testów.
 seed(84376529347523)
 start_time = datetime.now()
 
