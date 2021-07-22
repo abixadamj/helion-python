@@ -1,8 +1,8 @@
 # program r3_00_read.py
-# pierwsze wczytywanie danych i walidacja - funkcja read_datas ostateczna
+# Pierwsze wczytywanie danych i walidacja - funkcja read_datas ostateczna
 
 
-# definiujemy funkcję wczytującą dane
+# Definiujemy funkcję wczytującą dane
 def read_datas():
     def float_input(user_info, user_prompt, min_value):
         print("---[ wczytujemy dane]------------")
@@ -16,7 +16,7 @@ def read_datas():
 
         user_value = float(user_input)
         if user_value < min_value:
-            print(f"Wartość {user_value} jest < niż oczekiwana {min_value}.")
+            print(f"Wartość {user_value} jest mniejsza niż oczekiwana {min_value}.")
             return None
         return user_value
 
@@ -26,7 +26,7 @@ def read_datas():
     while h_start is None:
         h_start = float_input(
             "Brak poprawnej wartości dla h_start. Typ float (np: 3.14)",
-            "Teraz podaj wysokość początkową (w metrach, min. 10): ",
+            "Teraz podaj wysokość początkową (w m, min. 10): ",
             10,
         )
 
@@ -42,7 +42,7 @@ def read_datas():
 
 initial_values = None
 while initial_values is None:
-    print("Proszę, podaj dane niezbędne dla wykresu.")
+    print("Proszę, podaj dane niezbędne do wygenerowania wykresu.")
     initial_values = read_datas()
 
 print("OK, dane początkowe wczytane - działamy dalej.")

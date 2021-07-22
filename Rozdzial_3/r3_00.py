@@ -1,13 +1,13 @@
 # program r3_00.py
-# pierwsze wczytywanie danych i walidacja
+# Pierwsze wczytywanie danych i walidacja
 
-# definiujemy funkcję wczytującą dane
+# Definiujemy funkcję wczytującą dane
 def read_datas():
-    h_start = input("Teraz podaj wysokość początkową (w metrach): ")
-    v_start = input("teraz podaj prędność początkową (w m/sek) :")
+    h_start = input("Teraz podaj wysokość początkową (w m): ")
+    v_start = input("Teraz podaj prędkość początkową (w m/sek) :")
 
     if h_start < 10:
-        print("Niestety, wysokość zbyt niska (min. 10m)!")
+        print("Niestety, wysokość zbyt niska (min. 10 m)!")
         return None
 
     if v_start < 2:
@@ -19,7 +19,7 @@ def read_datas():
 
 initial_values = None
 while initial_values is None:
-    print("Proszę, podaj dane niezbędne dla wykresu.")
+    print("Proszę, podaj dane niezbędne do wygenerowania wykresu.")
     initial_values = read_datas()
 
 print("OK, dane początkowe wczytane - działamy dalej.")
