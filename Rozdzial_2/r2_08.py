@@ -1,15 +1,15 @@
 # program r2_08.py
-# wyświetlamy tło + obiekty + ruch piłki
-# paletki „opakowujemy” w definicję klasy aby zmniejszyć ilość kodu
-# dodajemy ubsługę ruchu paletek + odbijanie piłeczki
-# aktualizujemy kod dla różnych wielkości paletki/piłeczki
-# dodajemy wygraną i koniec gry
+# Wyświetlamy tło + obiekty + ruch piłki
+# Paletki „opakowujemy” w definicję klasy aby zmniejszyć ilość kodu
+# Dodajemy ubsługę ruchu paletek + odbijanie piłeczki
+# Aktualizujemy kod dla różnych wielkości paletki/piłeczki
+# Dodajemy wygraną i koniec gry
 
-# wczytujemy moduł pgzrun
+# Wczytujemy moduł pgzrun
 import pgzrun
 from random import randint, choice
 
-# definiujemy klasę dla paletek
+# Definiujemy klasę dla paletek
 class Palette:
     def __init__(self, palette, position, width=140, ball_width=10):
         """Palette i jej właściwości"""
@@ -37,19 +37,19 @@ class Palette:
 
     def bounce(self):
         """Sprawdzamy czy piłeczka odbija się od paletki"""
-        # jeśli środek paletki zbyt daleko od środka piłeczki to nie odbijamy
+        # Jeśli środek paletki zbyt daleko od środka piłeczki to nie odbijamy
         if (
             self.palette.distance_to(ball)
             > self.palette.pcenter + self.palette.ball_width
         ):
             return False
 
-        # jeśli środek paletki dalej niż 20 pixeli od środka piłeczki
+        # Jeśli środek paletki dalej niż 20 pixeli od środka piłeczki
         # w osi y to nie odbijamy
         if abs(self.palette.y - ball.y) > self.palette.ball_width * 2:
             return False
 
-        # dodatkowo zmieniamy kierunki lewo/prawo dla piłeczki
+        # Dodatkowo zmieniamy kierunki lewo/prawo dla piłeczki
         if self.palette.x > ball.x and ball.direction_x == "left":
             ball.direction_x = "right"
         elif self.palette.x < ball.x and ball.direction_x == "right":
@@ -59,27 +59,27 @@ class Palette:
         return True
 
 
-# definiujemy funkcje dodatkowe
+# Definiujemy funkcje dodatkowe
 def update_ball_position():
-    # aktualizujemy pozycję w osi X
+    # Aktualizujemy pozycję w osi X
     if ball.direction_x == "left":
         ball.x -= ball.speed
     elif ball.direction_x == "right":
         ball.x += ball.speed
 
-    # aktualizujemy pozycję w osi Y
+    # Aktualizujemy pozycję w osi Y
     if ball.direction_y == "up":
         ball.y -= ball.speed
     elif ball.direction_y == "down":
         ball.y += ball.speed
 
-    # sprawdzamy, czy piłeczka "odbije się"
+    # Sprawdzamy, czy piłeczka "odbije się"
     # od lewej lub prawej krawędzi okna
     if ball.x < 5:
         ball.direction_x = "right"
     elif ball.x > WIDTH - 5:
         ball.direction_x = "left"
-    # sprawdzamy, czy ktoś wygrał
+    # Sprawdzamy, czy ktoś wygrał
     if ball.y < 5:
         ball.winner = "GRACZ B"
     elif ball.y > HEIGHT - 5:
@@ -87,12 +87,12 @@ def update_ball_position():
 
 
 def update_palettes():
-    # gracz_A
+    # Gracz_A
     if keyboard.a:
         palette_a.move("left")
     elif keyboard.s:
         palette_a.move("right")
-    # gracz_B
+    # Gracz_B
     if keyboard.k:
         palette_b.move("left")
     elif keyboard.l:
@@ -114,24 +114,25 @@ def check_winner():
         )
 
 
-# start programu
+# Start programu
 WIDTH = 1280
 HEIGHT = 853
 TITLE = "PONG - najlepsza gra na świecie ;-)"
-# definiujemy wyświetlane obiekty i ich współrzędne X oraz Y
+
+# Definiujemy wyświetlane obiekty i ich współrzędne X oraz Y
 palette_a = Palette(Actor("palette.png"), (randint(70, 1210), 10))
 palette_b = Palette(Actor("palette.png"), (randint(70, 1210), 843))
 ball = Actor("ball.png")
 ball.y = HEIGHT // 2
 ball.x = WIDTH // 2
 
-# dodajemy własne właściwości
+# Dodajemy własne właściwości
 ball.direction_x = choice(("left", "right"))
 ball.direction_y = choice(("up", "down"))
 ball.speed = 2
 ball.winner = None
 
-# najważniejsze funkcje sterujące
+# Najważniejsze funkcje sterujące
 def update():
     update_ball_position()
     update_palettes()
@@ -146,5 +147,5 @@ def draw():
     check_winner()
 
 
-# uruchomienie modułu Pygame Zero
+# Uruchomienie modułu Pygame Zero
 pgzrun.go()

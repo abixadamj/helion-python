@@ -1,8 +1,8 @@
 # program r2_00.py
-# sprawdzamy instalację Pygame Zero
+# Sprawdzamy instalację Pygame Zero
 
-# wczytujemy moduł pgzrun
+# Wczytujemy moduł pgzrun
 import pgzrun
 
-# sprawdzamy
+# Sprawdzamy
 pgzrun.go()

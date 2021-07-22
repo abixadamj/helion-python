@@ -1,17 +1,18 @@
 # program r2_04.py
-# wyświetlamy tło + obiekty
+# Wyświetlamy tło + obiekty
 
-# wczytujemy moduł pgzrun
+# Wczytujemy moduł pgzrun
 import pgzrun
 from random import randint
 
-# definiujemy klasy i funkcje dodatkowe
+# Definiujemy klasy i funkcje dodatkowe
 
-# start programu
+# Start programu
 WIDTH = 1280
 HEIGHT = 853
 TITLE = "PONG - najlepsza gra na świecie ;-)"
-# definiujemy wyświetlane obiekty i ich współrzędne X oraz Y
+
+# Definiujemy wyświetlane obiekty i ich współrzędne X oraz Y
 palette_a = Actor("palette.png")
 palette_a.y = 10
 palette_a.x = randint(70, 1210)
@@ -22,7 +23,7 @@ ball = Actor("ball.png")
 ball.y = HEIGHT // 2
 ball.x = WIDTH // 2
 
-# najważniejsze funkcje sterujące
+# Najważniejsze funkcje sterujące
 def update():
     pass
 
@@ -34,5 +35,5 @@ def draw():
     ball.draw()
 
 
-# uruchomienie modułu Pygame Zero
+# Uruchomienie modułu Pygame Zero
 pgzrun.go()
