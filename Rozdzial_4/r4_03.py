@@ -1,7 +1,7 @@
 # program r4_03.py
-# sprawdzamy, czy posiadamy zainstalowane odpowiednie biblioteki zewnętrzne
-# importujemy funkcje dodatkowe
-# wprowadzamy kod z projektu https://github.com/chongchonghe/Python-solar-system
+# Sprawdzamy, czy posiadamy zainstalowane odpowiednie biblioteki zewnętrzne
+# Importujemy funkcje dodatkowe
+# Wprowadzamy kod z projektu https://github.com/chongchonghe/Python-solar-system
 
 from sys import exit
 from r4_functions import *
@@ -48,7 +48,7 @@ if not load_module_ok:
     print("Nie mogę dalej działać.")
     exit(0)
 
-# teraz mamy wszystkie moduły zainstalowane
+# Teraz mamy wszystkie moduły zainstalowane
 print("Super! Możemy działać....")
 
 nasaids = [1, 2, 3, 4]  # numery ID w bazie NASA
@@ -58,12 +58,12 @@ sizes = [0.38, 0.95, 1.0, 0.53]
 texty = [0.47, 0.73, 1, 1.5]
 planet_datas = get_horizon_data(nasaids, names, colors, sizes)
 
-# tworzymy obiekt ax, który będzie "oknem" do wyświetlenia animacji
+# Tworzymy obiekt ax, który będzie "oknem" do wyświetlenia animacji
 plt.style.use("dark_background")
 fig = plt.figure(
     planet_datas["info"], figsize=[8, 8]
-)  # to definiuje tytuł rozmiar okna
+)  # Fragment kodu wyżej definiuje tytuł rozmiar okna
 ax = plt.axes([0.0, 0.0, 1.0, 1.0], xlim=(-1.8, 1.8), ylim=(-1.8, 1.8))
 
-# wyświetlamy okno
+# Wyświetlamy okno
 plt.show()

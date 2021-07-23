@@ -44,4 +44,4 @@ def get_horizon_data(nasaids, names, colors, sizes, start_date="2018-01-01"):
 
 
 if __name__ == "__main__":
-    print("To jest moduł dodatkowy dla Rozdziału 4")
+    print("To jest moduł dodatkowy dla Rozdziału 4.")

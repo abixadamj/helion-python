@@ -1,7 +1,7 @@
 # program r4_04.py
-# sprawdzamy, czy posiadamy zainstalowane odpowiednie biblioteki zewnętrzne
-# importujemy funkcje dodatkowe
-# wprowadzamy kod z projektu https://github.com/chongchonghe/Python-solar-system
+# Sprawdzamy, czy posiadamy zainstalowane odpowiednie biblioteki zewnętrzne
+# Importujemy funkcje dodatkowe
+# Wprowadzamy kod z projektu https://github.com/chongchonghe/Python-solar-system
 
 from sys import exit
 from r4_functions import *
@@ -11,14 +11,14 @@ from datetime import date, datetime, timedelta
 import numpy as np
 
 
-class Planet:  # definiujemy poszczególne planety
+class CosmicObject:  # Definiujemy poszczególne obiekty kosmiczne (Słońce, Ziemia,...)
     def __init__(self, name, rad, color, r, v):
         self.name = name
-        self.r = np.array(r, dtype=np.float)  # wektory promienia odległości od Słońca
-        self.v = np.array(v, dtype=np.float)  # wektory prędkości względem Słońca
-        self.xs = []  # kolejne pozycje X
-        self.ys = []  # kolejne pozycje Y
-        # właściwości odwołujące się do okna z animacją
+        self.r = np.array(r, dtype=np.float)  # Wektory promienia odległości od Słońca
+        self.v = np.array(v, dtype=np.float)  # Wektory prędkości względem Słońca
+        self.xs = []  # Kolejne pozycje X
+        self.ys = []  # Kolejne pozycje Y
+        # Właściwości odwołujące się do okna z animacją
         self.plot = ax.scatter(
             r[0], r[1], color=color, s=rad ** 2, edgecolors=None, zorder=10
         )
@@ -29,52 +29,52 @@ class SolarSystem:
     def __init__(self):
         self.planets = []
         self.time = None
-        # właściwość
+        # Właściwość
         self.timestamp = ax.text(
             0.03, 0.94, "Data: ", color="w", transform=ax.transAxes, fontsize="x-large"
         )
 
     def add_planet(self, planet):
-        # dodajemy planetę
+        # Dodajemy planetę
         self.planets.append(planet)
 
     def evolve(self):
-        # obliczamy kolejne punkty trajektorii
+        # Obliczamy kolejne punkty trajektorii
         dt = 1
         self.time += timedelta(dt)
         plots = []
         lines = []
         for i, planet in enumerate(self.planets):
-            # obliczamy kolejne wektory promienia
+            # Obliczamy kolejne wektory promienia
             planet.r += planet.v * dt
-            # obliczamy przyspieszenie liczone w jednostkach astronomicznych
+            # Obliczamy przyspieszenie liczone w jednostkach astronomicznych
             # np.sum() -> https://numpy.org/doc/stable/reference/generated/numpy.sum.html
             # GM można wyrazić w m/s², a możemy też jako AU/day²
             # M to masa Słońca, około 333 000 razy większa od masy Ziemi (ok. 2×10^30 kg.)
-            # masy planet są zakładane jako pomijalne,
+            # Masy planet są zakładane jako pomijalne,
             # G - stała grawitacyjna, nie mylić z przyspieszeniem ziemskim g
             # sum(r²)^½ to długość wektora
             acc = -2.959e-4 * planet.r / np.sum(planet.r ** 2) ** (3 / 2)  # AU/day^2
-            # obliczamy kolejne wektory prędkości
+            # Obliczamy kolejne wektory prędkości
             planet.v += acc * dt
-            # w tym momencie korzystamy z właściwości mutable dla self.planets
-            # dodajemy pozycje X, Y i przesunięcie wykresu
+            # W tym momencie korzystamy z właściwości mutable dla self.planets
+            # Dodajemy pozycje X, Y i przesunięcie wykresu
             planet.xs.append(planet.r[0])
             planet.ys.append(planet.r[1])
-            # dodajemy kolejny element animacji
+            # Dodajemy kolejny element animacji
             planet.plot.set_offsets(planet.r[:2])
             plots.append(planet.plot)
             planet.line.set_xdata(planet.xs)
             planet.line.set_ydata(planet.ys)
-            # dodajemy kolejny odcinek linii
+            # Dodajemy kolejny odcinek linii
             lines.append(planet.line)
-        # dodajemy zabezpieczenie przed zbyt dużą ilością obliczeń, max. 10000 pozycji
+        # Dodajemy zabezpieczenie przed zbyt dużą ilością obliczeń, max. 10000 pozycji
         if len(planet.xs) > 10000:
             raise SystemExit("Aby zapobiec przepełnieniu pamięci RAM")
 
-        # ustawiamy tekst daty na kolejny dzień
+        # Ustawiamy tekst daty na kolejny dzień
         self.timestamp.set_text(f"Data: {self.time.isoformat()}")
-        # zwracamy wartości niezbędne do zbudowania animacji
+        # Zwracamy wartości niezbędne do wygenerowania animacji
         return plots + lines + [self.timestamp]
 
 
@@ -118,7 +118,7 @@ if not load_module_ok:
     print("Nie mogę dalej działać.")
     exit(0)
 
-# teraz mamy wszystkie moduły zainstalowane
+# Teraz mamy wszystkie moduły zainstalowane
 print("Super! Możemy działać....")
 
 nasaids = [1, 2, 3, 4]  # numery ID w bazie NASA
@@ -128,29 +128,29 @@ sizes = [0.38, 0.95, 1.0, 0.53]
 texty = [0.47, 0.73, 1, 1.5]
 planet_datas = get_horizon_data(nasaids, names, colors, sizes)
 
-# tworzymy obiekt ax, który będzie "oknem" do wyświetlenia animacji
+# Tworzymy obiekt ax, który będzie "oknem" do wyświetlenia animacji
 plt.style.use("dark_background")
 fig = plt.figure(
     planet_datas["info"], figsize=[8, 8]
 )  # to definiuje tytuł rozmiar okna
 ax = plt.axes([0.0, 0.0, 1.0, 1.0], xlim=(-1.8, 1.8), ylim=(-1.8, 1.8))
 
-# tworzymy układ słoneczny bazując na Słońcu + 4 planetach
-# wywołujemy klasę Planet dla Słońca tylko aby zadziałał konstruktor
-Planet("Słońce", 28, "yellow", [0, 0, 0], [0, 0, 0])
-# stowrzymy obiekt klasy Systemu Słonecznego
+# Tworzymy układ słoneczny bazując na Słońcu + 4 planetach
+# Wywołujemy klasę CosmicObject dla Słońca tylko aby zadziałał konstruktor
+CosmicObject("Słońce", 28, "yellow", [0, 0, 0], [0, 0, 0])
+# Stowrzymy obiekt klasy Systemu Słonecznego
 solar_system = SolarSystem()
 
-# ustawiamy czas początkowy
+# Ustawiamy czas początkowy
 solar_system.time = datetime.strptime(planet_datas["date"], "%Y-%m-%d").date()
 
-# generujemy dane do animacji
+# Generujemy dane do animacji
 for nasaid in nasaids:
     planet = planet_datas[nasaid]
 
-    # dodajemy planetę do układu słonecznego
+    # Dodajemy planetę do układu słonecznego
     solar_system.add_planet(
-        Planet(
+        CosmicObject(
             planet["name"],
             planet["size"] * 20,
             planet["color"],
@@ -159,7 +159,7 @@ for nasaid in nasaids:
         )
     )
 
-    # dodajemy do okna animacji nazwę planety
+    # Dodajemy do okna animacji nazwę Planety
     ax.text(
         0,
         -(texty[nasaid - 1] + 0.1),
@@ -171,12 +171,12 @@ for nasaid in nasaids:
     )
 
 
-# definiujemy funkcję, którą wywołamy z animation.FuncAnimation()
+# Definiujemy funkcję, którą wywołamy z animation.FuncAnimation()
 def animate(i):
     return solar_system.evolve()
 
 
-# wykonujemy animację
+# Wykonujemy animację
 solar_animation = animation.FuncAnimation(
     fig,
     animate,
@@ -186,5 +186,5 @@ solar_animation = animation.FuncAnimation(
     interval=10,
 )
 
-# wyświetlamy okno
+# Wyświetlamy okno
 plt.show()

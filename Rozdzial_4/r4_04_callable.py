@@ -1,5 +1,5 @@
 # program r4_04_callable.py
-# przykład funkcji przekazywanej jako parametr, tzw. typ function
+# Przykład funkcji przekazywanej jako parametr, tzw. typ function
 
 
 def dodawanie(a, b):
@@ -24,5 +24,5 @@ print(f"Wynik mnożenia: {wynik_2}")
 print(f"Typ funkcji dodawania = {type(dodawanie)}")
 print(f"Czy funkcja wykonywalna = {callable(dodawanie)}")
 
-print(f"Typ funkcji mnozenia = {type(mnozenie)}")
+print(f"Typ funkcji mnożenia = {type(mnozenie)}")
 print(f"Czy funkcja wykonywalna = {callable(mnozenie)}")

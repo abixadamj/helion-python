@@ -1,6 +1,6 @@
 # program r4_02.py
-# sprawdzamy, czy posiadamy zainstalowane odpowiednie biblilteki zewnętrzne
-# importujemy funkcje dodatkowe
+# Sprawdzamy, czy posiadamy zainstalowane odpowiednie biblilteki zewnętrzne
+# Importujemy funkcje dodatkowe
 
 from sys import exit
 from r4_functions import *
@@ -45,7 +45,7 @@ if not load_module_ok:
     print("Nie mogę dalej działać.")
     exit(0)
 
-# teraz mamy wszystkie moduły zainstalowane
+# Teraz mamy wszystkie moduły zainstalowane
 print("Super! Możemy działać....")
 
 nasaids = [1, 2, 3, 4]  # numery ID w bazie NASA

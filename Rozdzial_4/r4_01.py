@@ -1,6 +1,6 @@
 # program r4_01.py
-# sprawdzamy, czy posiadamy zainstalowane odpowiednie biblilteki zewnętrzne
-# importujemy funkcje dodatkowe
+# Sprawdzamy, czy posiadamy zainstalowane odpowiednie biblilteki zewnętrzne
+# Importujemy funkcje dodatkowe
 
 from sys import exit
 from r4_functions import *
