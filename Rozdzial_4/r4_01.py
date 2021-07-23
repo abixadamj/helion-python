@@ -1,5 +1,5 @@
 # program r4_01.py
-# Sprawdzamy, czy posiadamy zainstalowane odpowiednie biblilteki zewnętrzne
+# Sprawdzamy, czy mamy zainstalowane odpowiednie biblilteki zewnętrzne
 # Importujemy funkcje dodatkowe
 
 from sys import exit
@@ -45,5 +45,5 @@ if not load_module_ok:
     print("Nie mogę dalej działać.")
     exit(0)
 
-# teraz mamy wszystkie moduły zainstalowane
-print("Super! Możemy działać....")
+# Teraz mamy zainstalowane wszystkie moduły 
+print("Super! Możemy działać.")

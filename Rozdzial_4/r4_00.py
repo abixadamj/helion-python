@@ -1,6 +1,6 @@
 # program r4_00.py
-# Sprawdzamy, czy posiadamy zainstalowane odpowiednie biblilteki zewnętrzne
-# Moduły json, datetime są wbudowane
+# Sprawdzamy, czy mamy zainstalowane odpowiednie biblilteki zewnętrzne
+# Moduły json i datetime są wbudowane
 
 try:
     import numpy as np

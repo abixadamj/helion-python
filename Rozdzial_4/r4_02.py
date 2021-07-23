@@ -1,5 +1,5 @@
 # program r4_02.py
-# Sprawdzamy, czy posiadamy zainstalowane odpowiednie biblilteki zewnętrzne
+# Sprawdzamy, czy mamy zainstalowane odpowiednie biblilteki zewnętrzne
 # Importujemy funkcje dodatkowe
 
 from sys import exit
@@ -45,10 +45,10 @@ if not load_module_ok:
     print("Nie mogę dalej działać.")
     exit(0)
 
-# Teraz mamy wszystkie moduły zainstalowane
-print("Super! Możemy działać....")
+# Teraz mamy zainstalowane wszystkie moduły
+print("Super! Możemy działać.")
 
-nasaids = [1, 2, 3, 4]  # numery ID w bazie NASA
+nasaids = [1, 2, 3, 4]  # Numery ID w bazie NASA
 names = ["Merkury", "Wenus", "Ziemia", "Mars"]
 colors = ["gray", "orange", "green", "chocolate"]
 sizes = [0.38, 0.95, 1.0, 0.53]

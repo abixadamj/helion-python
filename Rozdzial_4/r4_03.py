@@ -1,5 +1,5 @@
 # program r4_03.py
-# Sprawdzamy, czy posiadamy zainstalowane odpowiednie biblioteki zewnętrzne
+# Sprawdzamy, czy mamy zainstalowane odpowiednie biblilteki zewnętrzne
 # Importujemy funkcje dodatkowe
 # Wprowadzamy kod z projektu https://github.com/chongchonghe/Python-solar-system
 
@@ -48,10 +48,10 @@ if not load_module_ok:
     print("Nie mogę dalej działać.")
     exit(0)
 
-# Teraz mamy wszystkie moduły zainstalowane
-print("Super! Możemy działać....")
+# Teraz mamy zainstalowane wszystkie moduły
+print("Super! Możemy działać.")
 
-nasaids = [1, 2, 3, 4]  # numery ID w bazie NASA
+nasaids = [1, 2, 3, 4]  # Numery ID w bazie NASA
 names = ["Merkury", "Wenus", "Ziemia", "Mars"]
 colors = ["gray", "orange", "green", "chocolate"]
 sizes = [0.38, 0.95, 1.0, 0.53]
@@ -62,7 +62,7 @@ planet_datas = get_horizon_data(nasaids, names, colors, sizes)
 plt.style.use("dark_background")
 fig = plt.figure(
     planet_datas["info"], figsize=[8, 8]
-)  # Fragment kodu wyżej definiuje tytuł rozmiar okna
+)  # Fragment kodu wyżej definiuje tytuł i rozmiar okna
 ax = plt.axes([0.0, 0.0, 1.0, 1.0], xlim=(-1.8, 1.8), ylim=(-1.8, 1.8))
 
 # Wyświetlamy okno

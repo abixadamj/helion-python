@@ -1,5 +1,5 @@
 # program r4_04.py
-# Sprawdzamy, czy posiadamy zainstalowane odpowiednie biblioteki zewnętrzne
+# Sprawdzamy, czy mamy zainstalowane odpowiednie biblilteki zewnętrzne
 # Importujemy funkcje dodatkowe
 # Wprowadzamy kod z projektu https://github.com/chongchonghe/Python-solar-system
 
@@ -49,7 +49,7 @@ class SolarSystem:
             planet.r += planet.v * dt
             # Obliczamy przyspieszenie liczone w jednostkach astronomicznych
             # np.sum() -> https://numpy.org/doc/stable/reference/generated/numpy.sum.html
-            # GM można wyrazić w m/s², a możemy też jako AU/day²
+            # GM można wyrazić w m/s², a także jako AU/day²
             # M to masa Słońca, około 333 000 razy większa od masy Ziemi (ok. 2×10^30 kg.)
             # Masy planet są zakładane jako pomijalne,
             # G - stała grawitacyjna, nie mylić z przyspieszeniem ziemskim g
@@ -68,7 +68,7 @@ class SolarSystem:
             planet.line.set_ydata(planet.ys)
             # Dodajemy kolejny odcinek linii
             lines.append(planet.line)
-        # Dodajemy zabezpieczenie przed zbyt dużą ilością obliczeń, max. 10000 pozycji
+        # Dodajemy zabezpieczenie przed zbyt dużą ilością obliczeń, maksymalnie 10 000 pozycji
         if len(planet.xs) > 10000:
             raise SystemExit("Aby zapobiec przepełnieniu pamięci RAM")
 
@@ -132,11 +132,11 @@ planet_datas = get_horizon_data(nasaids, names, colors, sizes)
 plt.style.use("dark_background")
 fig = plt.figure(
     planet_datas["info"], figsize=[8, 8]
-)  # to definiuje tytuł rozmiar okna
+)  # Fragment kodu wyżej definiuje tytuł i rozmiar okna
 ax = plt.axes([0.0, 0.0, 1.0, 1.0], xlim=(-1.8, 1.8), ylim=(-1.8, 1.8))
 
-# Tworzymy układ słoneczny bazując na Słońcu + 4 planetach
-# Wywołujemy klasę CosmicObject dla Słońca tylko aby zadziałał konstruktor
+# Tworzymy Układ Słoneczny bazując na Słońcu i 4 planetach
+# Wywołujemy klasę CosmicObject dla Słońca tylko po to, aby zadziałał konstruktor
 CosmicObject("Słońce", 28, "yellow", [0, 0, 0], [0, 0, 0])
 # Stowrzymy obiekt klasy Systemu Słonecznego
 solar_system = SolarSystem()
@@ -148,7 +148,7 @@ solar_system.time = datetime.strptime(planet_datas["date"], "%Y-%m-%d").date()
 for nasaid in nasaids:
     planet = planet_datas[nasaid]
 
-    # Dodajemy planetę do układu słonecznego
+    # Dodajemy planetę do Układu Słonecznego
     solar_system.add_planet(
         CosmicObject(
             planet["name"],
