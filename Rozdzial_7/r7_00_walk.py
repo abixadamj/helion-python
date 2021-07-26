@@ -1,5 +1,5 @@
 # program r7_00_walk.py
-# przykład użycia os.walk()
+# Przykład użycia os.walk()
 
 import os
 

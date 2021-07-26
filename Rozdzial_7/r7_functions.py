@@ -1,5 +1,5 @@
 # program r7_functions.py
-# funkcje dodatkowe
+# Funkcje dodatkowe
 
 import sys
 import os
@@ -22,7 +22,7 @@ def open_image(file: str) -> Image:
             image = Image(image_file)
         except:
             return False
-    # po zamknięciu pliku
+    # Po zamknięciu pliku
     return image
 
 

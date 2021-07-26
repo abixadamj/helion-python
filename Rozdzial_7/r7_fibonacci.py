@@ -1,5 +1,5 @@
 # program r7_fibonacci.py
-# rekurencyjne obliczanie elementu ciągu Fibonacciego
+# Rekurencyjne obliczanie elementu ciągu Fibonacciego
 
 
 def fib_rek(n):

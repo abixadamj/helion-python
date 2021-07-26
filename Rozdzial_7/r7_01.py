@@ -1,5 +1,5 @@
 # program r7_01.py
-# rozpoczynamy program
+# Rozpoczynamy program
 
 import os
 from r7_functions import *
