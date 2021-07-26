@@ -11,22 +11,22 @@ except:
     print("Zainstaluj: 'pip install pandas' ")
     exit(0)
 
-# jest ok, działamy dalej
+# Jest ok, działamy dalej
 source_data = "http://otwartedane.gdynia.pl/portal/data/city/6/3/data.csv"
 
-# zapasowa kopia - stan na 16.06.2021 rok
+# Zapasowa kopia - stan na 16.06.2021 roku
 # source_data = "https://raw.githubusercontent.com/abixadamj/helion-python/main/Rozdzial_5/data.csv"
 print(f"Dane źródłowe: {source_data}")
 
-# tworzymy tzw. "DataFrame"
+# Tworzymy tzw. "DataFrame"
 try:
     df = pd.read_csv(source_data)
     print("Pobrano dane źródłowe.")
 except:
-    print("UWAGA! wystąpił błąd.")
+    print("UWAGA! Wystąpił błąd.")
     exit(0)
 
-# wyświetlamy dane w postaci pobranej z sieci
+# Wyświetlamy dane pobrane z sieci
 print("----[ informacje o danych źródłowych ]---")
 print(df)
 print("----------------")
