@@ -1,5 +1,5 @@
 # program r6_03_mapa_eu.py
-# mapa Europy
+# Mapa Europy
 
 from sys import exit
 
@@ -20,38 +20,38 @@ except:
     print("Zainstaluj: 'pip install matplotlib' ")
     exit(0)
 
-# wczytane dane będziemy zapisywać jako obiekty `list`
-cities = []  # nazwy miejscowości
-X = []  # szerokość geograficzna
-Y = []  # długość geograficzna
+# Wczytane dane będziemy zapisywać jako obiekty `list`
+cities = []  # Nazwy miejscowości
+X = []  # Szerokość geograficzna
+Y = []  # Długość geograficzna
 
-# wczytujemy dane z pliku
+# Wczytujemy dane z pliku
 with open("miasta.csv", "r", encoding='utf-8') as dane:
     cities_all = dane.readlines()
 
 print(cities_all)
 
-# czyścimy dane
+# Czyścimy dane
 for city in cities_all:
     datas = city.strip().split(",")
     cities.append(datas[0])
     X.append(float(datas[1]))
     Y.append(float(datas[2]))
 
-# teraz zobaczymy nasze dane
+# Teraz zobaczymy nasze dane
 print(cities, X, Y, sep="\n======\n")
 
-# tworzymy okno
+# Tworzymy okno
 figure = plt.figure(figsize=(7, 5))
 ax = figure.add_subplot(
     1, 1, 1, projection=crs.Mercator()
-)  # dodajemy projekcję Merkatora
+)  # Dodajemy projekcję Merkatora
 
-# dodajemy właściwość do mapy, zdjęcie
+# Dodajemy właściwość do mapy - zdjęcie
 ax.stock_img()
 
-# wydzielamy tylko wycinek mapy - Europę
+# Wydzielamy tylko wycinek mapy - Europę
 ax.set_extent([-10, 35, 66, 34], crs=crs.PlateCarree())
 
-# wyświetlamy okno
+# Wyświetlamy okno
 plt.show()
