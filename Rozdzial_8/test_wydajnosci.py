@@ -1,8 +1,8 @@
 # program test_wydajnosci.py
-# test wydajności Python w Windows i Linux
+# Test wydajności Pythona w systemach Windows i Linux
 
 
-# moduły wykorzystywane
+# Wykorzystywane moduły
 import sys
 
 try:
@@ -18,7 +18,7 @@ except:
         print("pip install msvc-runtime")
     sys.exit(status=2)
 
-# reszta to standardowe moduły
+# Reszta to standardowe moduły
 import os
 import pickle
 import json
@@ -26,7 +26,7 @@ from random import random, randint, seed
 from datetime import datetime
 from math import sin, cos
 
-# funkcje pomocnicze
+# Funkcje pomocnicze
 def zapis_danych(dane, nazwa_pliku="plik_danych.dat"):
     with open(nazwa_pliku, "wb") as p:
         pickle.dump(dane, p)
@@ -71,12 +71,12 @@ def zapis_wykresu(
     plt.close("all")
 
 
-# Ustawienie stałego ziarna dla generatora liczb pseudolosowych tak, aby liczby zwracane przez 
+# Ustawienie stałego ziarna dla generatora liczb pseudolosowych tak, aby liczby zwracane przez
 # generator były takie same przy kolejnych uruchomieniach testów.
 seed(84376529347523)
 start_time = datetime.now()
 
-# start - od tego momentu liczymy
+# Start - od tego momentu liczymy
 wyniki = {
     "Aplikacja": "Program testowy",
     "Autor": "Adam Jurkiewicz",
@@ -100,14 +100,14 @@ print("Start testu:")
 for w in wyniki:
     print(f"{w}: {wyniki[w]}")
 print("-----------------")
-# 100 tys. punktów podstawowych - losowo
+# 200 punktów podstawowych
 dane_x = [x for x in range(-100, 100)]
 zapis_danych(dane_x, "dane_wejsciowe.dat")
 
 
 _1000 = 1
 for i in range(1, 10000):
-    # odczyt danych podstawowych
+    # Odczyt danych podstawowych
     dane_x = odczyt_danych_testowych("dane_wejsciowe.dat")
     if i % 1000 == 0:
         time_now = datetime.now() - start_time
