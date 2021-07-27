@@ -1,5 +1,5 @@
 # program r1_19.py
-# funkcja do analizy ocen - kolejna wersja
+# Funkcja do analizy ocen - kolejna wersja
 
 import matplotlib.pyplot as plt
 
@@ -14,9 +14,9 @@ def srednia_ocen(oceny):
 
     srednia = suma / len(oceny)
 
-    # rysujemy wykres kołowy z oceny
+    # Rysujemy wykres kołowy na podstawie listy ocen
     legenda = ("1", "2", "3", "4", "5", "6")
-    # budujemy listę ilości ocen od 1 do 6
+    # Budujemy listę ilości ocen od 1 do 6
     oceny_zliczone = [oceny.count(x) for x in range(1, 7)]
     #
     plt.pie(oceny_zliczone, labels=legenda)
@@ -25,7 +25,7 @@ def srednia_ocen(oceny):
     return round(srednia, 2)
 
 
-# sprawdzamy działanie funkcji
+# Sprawdzamy działanie funkcji
 print(srednia_ocen("Błędne dane"))
 print(
     srednia_ocen(

@@ -1,5 +1,5 @@
 # program r1_26.py
-# klasy i ich ukryte właściwości
+# Klasy i ich ukryte właściwości
 
 
 class Paletka:
@@ -30,7 +30,7 @@ print("------------------------------------------")
 print("Teraz sprawdzimy nasze właściwości:")
 paletka_a.info()
 paletka_b.info()
-# teraz wpisujemy nową wartość do właściwości klasy
+# Teraz wpisujemy nową wartość do właściwości klasy
 Paletka.__rodzaj = "Nowy rodzaj"
 #
 paletka_a.info()

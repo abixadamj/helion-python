@@ -1,8 +1,8 @@
 # program r1_12_enumerate.py
-# przykłady dla pętli for - funkcja enumerate()
+# Przykład dla pętli for - funkcja enumerate()
 
 napis = "Python"
 print(napis)
-# wykorzystujemy enumerate()
+# Wykorzystujemy enumerate()
 for nr, litera in enumerate(napis):
     print(f"Indeks: {nr} / wartość: {litera}")

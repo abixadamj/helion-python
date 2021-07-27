@@ -1,9 +1,9 @@
 # program r1_25.py
-# klasy i ich właściwości
+# Klasy i ich właściwości
 
 
 class Paletka:
-    rodzaj = "Paletka do Ping Ponga"
+    rodzaj = "Paletka do ping-ponga"
     ilosc = 0
 
     def __init__(self, kolor):
@@ -30,7 +30,7 @@ print("------------------------------------------")
 print("Teraz sprawdzimy nasze właściwości:")
 paletka_a.info()
 paletka_b.info()
-# teraz wpisujemy nową wartość do właściwości klasy
+# Teraz wpisujemy nową wartość do właściwości klasy
 Paletka.rodzaj = "Nowy rodzaj"
 #
 paletka_a.info()

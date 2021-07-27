@@ -1,5 +1,5 @@
 # program r1_11.py
-# przykłady dla pętli for - funkcja range()
+# Przykłady dla pętli for - funkcja range()
 
 for i in range(3):
     print(f"Napis po raz {i}")

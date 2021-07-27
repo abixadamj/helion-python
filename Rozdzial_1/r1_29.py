@@ -1,5 +1,5 @@
 # program r1_29.py
-# klasy - program przykładowy
+# Klasy - program przykładowy
 
 
 class Paletka:
@@ -14,7 +14,7 @@ class Paletka:
         Paletka.ilosc += 1
 
     def __del__(self):
-        # destruktor
+        # Destruktor
         Paletka.ilosc -= 1
 
     def info(self):

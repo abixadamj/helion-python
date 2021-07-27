@@ -1,5 +1,5 @@
 # program r1_06.py
-# test modyfikacji obiektu typu list
+# Test modyfikacji obiektu typu list
 list_object = [11, 22, 33, "A", "B", "C"]
 print(f"Dla ID = {id(list_object)} wartość: {list_object}")
 
@@ -10,7 +10,7 @@ print(f"Dla ID = {id(list_object)} wartość: {list_object}")
 list_object[2] = "Inna wartość"
 print(f"Dla ID = {id(list_object)} wartość: {list_object}")
 
-# test modyfikacji obiektu typu dict
+# Test modyfikacji obiektu typu dict
 dict_object = {1: "Pierwszy element"}
 print(f"Dla ID = {id(dict_object)} wartość: {dict_object}")
 

@@ -1,5 +1,5 @@
 # program r1_03_sekwencje_dict.py
-# wyjątek przy odwoływaniu się do elementów słownika
+# Wyjątek przy odwoływaniu się do elementów słownika
 
 slownik = {1: "Adam", 2: "Jurkiewicz", "S": "Linux"}
 print(slownik)

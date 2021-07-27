@@ -1,5 +1,5 @@
 # program r1_int_float.py
-# do input dodajemy zmianę typów
+# Do input dodajemy zmianę typów
 
 print("Sprawdzamy działanie input")
 

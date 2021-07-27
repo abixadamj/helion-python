@@ -1,5 +1,5 @@
 # program r1_16.py
-# pętla while - nieskończone działanie z przerwaniem
+# Pętla while - nieskończone działanie z przerwaniem
 
 from math import sin
 
@@ -16,6 +16,6 @@ while True:
         break
     print(f"Obliczony y={y}")
 
-# ten kod zostanie wykonany po break
+# Ten kod zostanie wykonany po break
 print(f"Lista X = {X}")
 print(f"Lista Y = {Y}")

@@ -1,5 +1,5 @@
 # program r1_28.py
-# klasy i destruktor
+# Klasy i destruktor
 
 
 class Paletka:
@@ -11,7 +11,7 @@ class Paletka:
         Paletka.ilosc += 1
 
     def __del__(self):
-        # destruktor
+        # Destruktor
         Paletka.ilosc -= 1
         print(f"Z pamięci usuwamy id = {id(self)}")
 
@@ -34,7 +34,7 @@ print("------------------------------------------")
 print("Teraz sprawdzimy nasze właściwości:")
 paletka_a.info()
 paletka_b.info()
-# teraz usuwamy obiekty
+# Teraz usuwamy obiekty
 del paletka_b
 #
 paletka_a.info()

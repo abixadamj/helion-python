@@ -1,5 +1,5 @@
 # program r1_10_break.py
-# przykłady dla pętli for i break
+# Przykład dla pętli for i klauzuli break
 
 test_object = ["Adam", "Beata", "Szymon", "Artur", "Magda"]
 print(f"Testujemy dla obiektu: {test_object}")

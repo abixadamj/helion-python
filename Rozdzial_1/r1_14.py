@@ -1,5 +1,5 @@
 # program r1_14.py
-# przykłady dla enumerate()
+# Przykłady dla enumerate()
 
 napis = "To jest napis."
 for nr, wartosc in enumerate(napis):

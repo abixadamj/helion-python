@@ -1,5 +1,5 @@
 # program r1_32.py
-# przestrzeń nazw - klasy i obiekty
+# Przestrzeń nazw - klasy i obiekty
 
 
 class Klasa:
@@ -21,7 +21,7 @@ print(obiekt_a.wlasciwosc_1)
 print(obiekt_b.wlasciwosc_2)
 print(obiekt_a.wlasciwosc_0)
 print(obiekt_b.wlasciwosc_0)
-# poniżej błędy
+# Poniżej błędy
 print("---------")
 print(obiekt_a.wlasciwosc_2)
 print(obiekt_b.wlasciwosc_1)

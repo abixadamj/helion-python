@@ -1,5 +1,5 @@
 # program r1_07.py
-# przykłady dla instrukcji warunkowych
+# Przykłady dla instrukcji warunkowych
 
 test_object = 23
 if test_object < 20:

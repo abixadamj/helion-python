@@ -1,5 +1,5 @@
 # program r1_10_nested_loops.py
-# przykłady dla zagnieżdżonych pętli for
+# Przykłady dla zagnieżdżonych pętli for
 
 test_object = ["Adam", "Beata", "Szymon", "Artur", "Magda"]
 print(f"Testujemy dla obiektu: {test_object}")

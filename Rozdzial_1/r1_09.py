@@ -1,5 +1,5 @@
 # program r1_09.py
-# przykłady dla instrukcji warunkowych
+# Przykłady dla instrukcji warunkowych
 
 test_object = 13
 print(f"test dla wartości = {test_object}")

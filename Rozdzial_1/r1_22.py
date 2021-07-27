@@ -1,5 +1,5 @@
 # program r1_22.py
-# najprostszy sposób definiowania obiektu
+# Najprostszy sposób definiowania obiektu
 
 
 class Paletka:

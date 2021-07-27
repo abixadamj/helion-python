@@ -1,5 +1,5 @@
 # program r1_10_continue.py
-# przykłady dla pętli for i continue
+# Przykład dla pętli for i klauzuli continue
 
 test_object = ["Adam", "Beata", "Szymon", "Artur", "Magda"]
 print(f"Testujemy dla obiektu: {test_object}")

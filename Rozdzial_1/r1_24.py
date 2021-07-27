@@ -1,5 +1,5 @@
 # program r1_24.py
-# rozbudowany sposób definiowania obiektu i metody
+# Rozbudowany sposób definiowania obiektu i metody
 
 
 class Paletka:

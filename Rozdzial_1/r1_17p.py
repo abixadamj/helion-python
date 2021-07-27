@@ -1,5 +1,5 @@
 # program r1_17p.py
-# pierwsza funkcja - parametry i ich ID
+# Pierwsza funkcja - parametry i ich ID
 
 
 def test_id(parametr):
@@ -9,7 +9,7 @@ def test_id(parametr):
     print(f"Parametr = {parametr}")
 
 
-# sprawdzamy działanie funkcji i ID
+# Sprawdzamy działanie funkcji i ID obiektu
 
 obiekt_1 = "TEST A"
 print(f"ID obiekt_1 = {id(obiekt_1)}")
