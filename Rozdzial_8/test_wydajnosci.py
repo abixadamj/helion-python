@@ -105,7 +105,6 @@ dane_x = [x for x in range(-100, 100)]
 zapis_danych(dane_x, "dane_wejsciowe.dat")
 
 
-_1000 = 1
 for i in range(1, 10000):
     # Odczyt danych podstawowych
     dane_x = odczyt_danych_testowych("dane_wejsciowe.dat")
