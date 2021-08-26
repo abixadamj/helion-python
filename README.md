@@ -2,6 +2,8 @@
 
 Kody źródłowe do książki pt. „Python 3 - Projekty dla początkujących i pasjonatów” wydanej przez wydawnictwo Helion Edukacja.
 
+Książka dostępna w sklepie: https://helion.pl/ksiazki/python-3-projekty-dla-poczatkujacych-i-pasjonatow-adam-jurkiewicz,pytmie.htm#format/d
+
 ## Spis treści:
 * Rozdział 0: Wstęp
 * Rozdział 1: Podstawy języka Python
