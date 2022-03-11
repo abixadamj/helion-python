@@ -14,8 +14,8 @@ import numpy as np
 class CosmicObject:  # Definiujemy poszczególne obiekty kosmiczne (Słońce, Ziemia,...)
     def __init__(self, name, rad, color, r, v):
         self.name = name
-        self.r = np.array(r, dtype=np.float)  # Wektory promienia odległości od Słońca
-        self.v = np.array(v, dtype=np.float)  # Wektory prędkości względem Słońca
+        self.r = np.array(r, dtype=float)  # Wektory promienia odległości od Słońca
+        self.v = np.array(v, dtype=float)  # Wektory prędkości względem Słońca
         self.xs = []  # Kolejne pozycje X
         self.ys = []  # Kolejne pozycje Y
         # Właściwości odwołujące się do okna z animacją
