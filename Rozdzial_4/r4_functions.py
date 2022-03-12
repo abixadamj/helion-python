@@ -1,14 +1,15 @@
 # r4_functions.py - funkcje dodatkowe
 
-
-def ok_module_info(name):
-    print(f"Moduł: {name} - zainstalowany poprawnie")
+def ok_module_info(names):
+    print(f"Moduły: {', '.join(names)} – zainstalowano poprawnie!")
+    print("Super! Możemy działać....")
 
 
 def error_module_info(name):
-    print(f"Brak modułu: {name}")
-    print(f"Instalacja poleceniem: pip install {name}")
+    print(f"{name}")
+    print("Instalacja poleceniem: pip install", name[16:].replace("'", ""))
     print("-----------------------")
+    return False
 
 
 def get_horizon_data(nasaids, names, colors, sizes, start_date="2018-01-01"):
